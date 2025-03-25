@@ -193,9 +193,8 @@ if __name__ == '__main__':
         response_codes_df['Ответы'] = current_batch_df['Ответы'].values
         result_df = pd.concat([result_df, response_codes_df])
         start_pos += batch_size
+
     result_df = result_df.reset_index().drop(columns='index')
-    # result_df[['Ответы', 'code_1', 'code_2', 'code_3', 'code_4', 'code_5']].to_csv(
-    #     f'result_v7_8_5.csv', index=False)
 
     result_df[['Ответы', 'code_1', 'code_2', 'code_3',
                'code_4', 'code_5', 'code_6', 'code_7',
